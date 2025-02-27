@@ -1,0 +1,26 @@
+html,body,#root{
+    height: 100%;
+}
+.login-page{
+    background: linear-gradient(#00000000,black),url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpMMMiTJx5zuvZYRF-GUTs2HA-wtLaoCt0_w&s");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 100%;
+    position: relative;
+    form{
+        width: 300px;
+        height: 250px;
+        background-color: rgba(0, 0, 0, 0.41);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        a{
+            color:whitesmoke;
+            position: absolute;
+            left:10px;
+            bottom: 30px;
+        }
+    }
+}

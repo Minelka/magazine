@@ -1,0 +1,48 @@
+nav{
+    background-color: #FCC737;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px 0px 0;
+    color: #7E1891;
+
+    .brand{
+        display: flex;
+        align-items: center;
+
+        img{
+            width: 100px;
+        }
+    }
+    .usercard{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        img{
+            width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+        button{
+            padding: 5px 10px;
+            border-radius: 7px;
+            border: 1px solid #E73879;
+            color: #FCC737;
+            background-color: #E73879;
+            cursor: pointer;
+            transition: .7s;
+            &:hover{
+                background-color: #FCC737;
+                color: #E73879;
+                box-shadow: 3px 3px 15px #E73879;
+            }
+        }
+    }
+}
+svg{
+    position: relative;
+    top: -20px;
+    z-index: -1;
+}

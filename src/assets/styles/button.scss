@@ -1,0 +1,18 @@
+.buton {
+    background-color: yellow;      // Butonun arka planı sarı
+    color: #7f189186;                  // Yazı rengi siyah
+    font-family: 'Courier New', monospace;  // Yazı tipi monospace
+    padding: 10px 20px;            // Butona iç boşluk
+    border: none;                  // Kenarlık yok
+    border-radius: 5px;            // Köşeleri yuvarlat
+    cursor: pointer;               // Fareyi üzerine getirdiğinde pointer (el işareti) olur
+  
+    &:hover {
+      background-color: darkgoldenrod;  // Hover durumunda butonun rengi değişir
+    }
+  
+    &:focus {
+      outline: none;               // Butona odaklanıldığında mavi sınır çizgisini kaldırır
+    }
+  }
+  

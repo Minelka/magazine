@@ -1,0 +1,112 @@
+.card-list{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px 20px;
+    margin-block: 40px;
+}
+.card-container{
+    width: 400px;
+    height:230px;
+    position: relative;
+    .delete, .edit, .buton{
+        position: absolute;
+        bottom: -30px;
+        width: 133px;
+        height: 30px;
+        border: none;
+        cursor: pointer;
+        transition: 1s;
+        z-index: 0;
+        .icon{
+            text-align: center;
+            font-size: 18px;
+            position: absolute;
+            left: 50%;
+            top: 8px;
+            transform: translate(-50%, 0);
+            transition: 1s;
+        }
+        &:hover{
+            .icon{
+                top: 50%;
+                transform: translate(-50%, -50%);
+                font-size: 30px;
+                transition: 1s;
+
+            }
+        }
+    }
+    .delete{
+        right: 0;
+        color: whitesmoke;
+        background-color: #f26a0f76;
+        border-radius: 0 0 10px 0;
+        &:hover{
+            height: 260px;
+            border-radius: 0 10px 10px 0;
+            opacity: .7s;
+        }
+
+    }
+    .edit{
+        left: 0;
+        background-color: #7f189186;
+        border-radius: 0 0 0 10px;
+        &:hover{
+            height: 260px;
+            border-radius: 10px 0 0 10px;
+            opacity: .7s;
+        }
+    }
+    .buton{
+        left: 133px;
+        background-color: #18759186;
+        &:hover{
+            height: 260px;
+            border-radius: 10px 0 0 10px;
+            opacity: .7s;
+        }  
+    }
+}
+.card{
+    width: 400px;
+    height: 230px;
+    display: flex;
+    background: #FCC737;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+    &-text{
+        width: 180px;
+        opacity: 1;
+        height: 230px;
+        justify-content: center;
+        right: -5px;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    img{
+        width: 200px;
+        height: 230px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0 ;
+    }
+
+    &:hover{
+        img{
+            width: 210px;
+            transition: 1s;
+            border-radius: 10px 0 0 10px;
+            transform: rotate(360deg); 
+        }
+        .card-text{
+            transition: 0.5s;
+            font-size:18px;
+        }
+    }
+    span{
+        color:#7E1891;
+    }
+}
