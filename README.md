@@ -1,26 +1,29 @@
 # Magazine
 
-**Magazine**, bir dergi abonelik ve satış sistemini yönetmek için geliştirilmiş bir konsol uygulamasıdır. Kullanıcıların dergi abonelikleri oluşturmasına, iptal etmesine ve mevcut aboneliklerini görüntülemesine olanak tanır.
+**Magazine**, kullanıcıların dergi içeriklerini görüntüleyebildiği, favorilere ekleyebildiği ve yeni makaleler keşfedebildiği bir React uygulamasıdır. Proje, modern arayüz tasarımı ve API entegrasyonları ile dinamik bir kullanıcı deneyimi sunar.
 
 ## Özellikler
 
-- **Abonelik Yönetimi**: Abonelik oluşturma, iptal etme ve listeleme.
-- **Fiyat Hesaplama**: Abonelik sürelerine göre otomatik fiyat hesaplama.
-- **Konsol Arayüzü**: Basit komut satırı arayüzü.
-- **Kategori Bazlı Abonelikler**: Farklı dergi kategorileri üzerinden abonelik işlemleri.
+- **Makale Listeleme**: Dergi makalelerinin listelenmesi.
+- **Favorilere Ekleme**: Kullanıcıların favori makalelerini işaretleyebilmesi.
+- **Dinamik Filtreleme**: Kategori bazında makale filtreleme.
+- **Responsive Tasarım**: Mobil ve masaüstü uyumlu arayüz.
+- **API Entegrasyonu**: Dış API'lerden veri çekme.
 
 ## Teknolojiler
 
-- **.NET 7.0**
-- **C#**
-- **OOP (Nesne Yönelimli Programlama)**
+- **React**
+- **Redux (State Yönetimi)**
+- **Axios**
+- **React Router**
+- **TailwindCSS**
 
 ## Kurulum
 
 ### Gereksinimler
 
-- .NET 7.0 SDK
-- Visual Studio veya Visual Studio Code
+- Node.js (v16 ve üzeri)
+- npm veya yarn
 
 ### Adımlar
 
@@ -39,36 +42,45 @@
 3. Bağımlılıkları yükleyin:
 
    ```bash
-   dotnet restore
+   npm install
+   # veya
+   yarn install
    ```
 
-4. Uygulamayı çalıştırın:
+4. Uygulamayı başlatın:
 
    ```bash
-   dotnet run
+   npm start
+   # veya
+   yarn start
    ```
+
+Uygulama varsayılan olarak `http://localhost:3000` adresinde çalışır.
 
 ## API Endpoints
 
-Bu proje bir konsol uygulaması olduğu için herhangi bir API Endpoint'i içermemektedir.
+Bu proje, aşağıdaki API Endpoint'leri üzerinden veri çekmektedir:
+
+- **GET** `/api/articles` – Tüm makaleleri listeler.
+- **GET** `/api/articles/{id}` – Belirli bir makalenin detaylarını getirir.
+- **POST** `/api/favorites` – Makaleyi favorilere ekler.
+- **DELETE** `/api/favorites/{id}` – Favorilerden kaldırır.
 
 ## Proje Yapısı
 
 ```
 Magazine
-├─ Models     # Veri modelleri
-├─ Services   # İş servisleri
-├─ Data       # Örnek veriler
-└─ Program.cs # Uygulama başlatma noktası
+├─ src
+│  ├─ components    # Yeniden kullanılabilir bileşenler
+│  ├─ pages         # Sayfa bileşenleri
+│  ├─ services      # API istekleri
+│  ├─ store        # Redux Store
+│  ├─ assets       # Görseller ve stiller
+│  └─ App.jsx      # Ana bileşen
+└─ package.json    # Bağımlılıklar
 ```
-
-### Açıklama
-
-- **Models**: Dergi ve abonelik modellerini içerir.
-- **Services**: Abonelik işlevlerini yönetir.
-- **Data**: Örnek veri sınıflarını içerir.
-- **Program.cs**: Uygulamanın başlangıç noktasıdır.
 
 ## Lisans
 
 Bu proje açık kaynak değildir ve yalnızca izinli kullanıcılar tarafından kullanılabilir.
+
